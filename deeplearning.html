@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Jane Doe Portfolio: Generate Music</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">j.</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active"> back to home</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+
+            <!--===== HEADER =====-->
+            <section class="project__header">
+                <h1 class="project__title__text"> Generate music with <br> deep learning </h1>
+                <img class="project__image" src="assets/img/wavenet.png" alt="">
+
+            </section>
+
+            <!--===== OVERVIEW =====-->
+            <section class="project__info__container">
+                <div class="project__info__text">
+                    <div class="project__info__title_div"> 
+                        <h1 class="project__info__title"> Overview</h1>
+                        <div class="project__info__line"> </div>
+                    </div>
+                    <h2 class="project__info__description"> Deep learning is changing the way we listen to and create music. AI music generation is drastically increasing in popularity, with Magenta Studio, MuseTree, and Juebox as examples of some of the most popular softwares. In this project, we <mark> use deep learning to generate a ten second audio with WaveNet employing a dataset of piano songs </mark>.
+                    </h2>
+                </div>
+
+            </section>
+
+            <!--===== MODEL ARCHITECTURE =====-->
+            <section class="project__image__container">
+                <h2 class="image__title"> WaveNet Model Architecture </h2>
+                <img class="convolution__image" src="assets/img/model.png" alt="">
+                <h3 class="image__caption"> Figure I. The overall architecture of the WaveNet model </h3>
+            </section>
+
+            <!--===== RELATED WORK =====-->
+            <section class="project__info__container">
+                <div class="project__info__text">
+                    <div class="project__info__title_div"> 
+                        <h1 class="project__info__title"> Related Work </h1>
+                        <div class="project__info__line"> </div>
+                    </div>
+                    <h2 class="project__info__description">
+                        Since WaveNet was first proposed in late 2016 and has nearly six years of history, there are several papers and implementations related to WaveNet available in academic literature. This project references <mark>Oord et al (2016)</mark>, which introduces the structure of the model and mentions potential applications such as text-to-speech translation and music generation. Besides the paper, the implementation of this project is based on <mark>Music Generation Using Deep Learning</mark>, which is a precise reconstruction of the original model. 
+                    </h2>
+                </div>
+
+            </section>
+
+            <!--===== METHODOLOGY =====-->
+            <section class="project__info__container">
+                <div class="project__info__text">
+                    <div class="project__info__title_div"> 
+                        <h1 class="project__info__title"> Methodology </h1>
+                        <div class="project__info__line"> </div>
+                    </div>
+                    <h2 class="project__info__description"> 
+                        There are multiple Deep Learning-based architectures for automatically generating music. This project focuses on using <mark>WaveNet</mark>, a Deep Learning-based generative model developed by Google DeepMind for raw audio. 
+                        <br>
+                        <br>
+                        The training process with WaveNet is similar to that of natural language processing (NLP). In a traditional language model, the model tries to predict the next word when given a sequence of words. Similarly, in WaveNet, <mark>the model tries to predict the next sample when given a sequence of samples</mark>. In this project, the input data is multiple audio files of the same length, denoted as x<sub>1</sub>, x<sub>2</sub>, …, x<sub>t</sub>. During the training process, the model predicts x&#770;<sub>n</sub> based on the input data and compares the result with the ground truth x<sub>n</sub> to obtain the MSE loss. 
+                        <br>
+                        <br>
+                        The type of convolution layers that build up WaveNet are <mark>Causal Dilated 1-Dimensional Convolution layers</mark>. A Causal Dilated Convolution is a causal convolution where the filter is applied over an area larger than its length by skipping input values with a certain step. A <mark>dilated causal convolution effectively allows the network to have very large receptive fields with just a few layers</mark>.
+                    </h2>
+                </div>
+
+            </section>
+
+            <!--===== COMPARING CONVOLUTION LAYERS =====-->
+            <section class="project__image__container">
+                <h2 class="image__title"> Causal Convolution Layer vs. Causal Dilated Convolution Layer </h2>
+                <img class="convolution__image" src="assets/img/layer1.png" alt="">
+                <h3 class="image__caption"> Figure II. Causal Convolution Layer (above) </h3>
+                <img class="convolution__image" src="assets/img/layer2.png" alt="">
+                <h3 class="image__caption"> Figure III. Causal Dilated Convolution Layer (above) </h3>
+            </section>
+
+            <!--===== RESULTS =====-->
+            <section class="project__info__container">
+                <div class="project__info__text">
+                    <div class="project__info__title_div"> 
+                        <h1 class="project__info__title"> Results </h1>
+                        <div class="project__info__line"> </div>
+                    </div>
+                    <h2 class="project__info__description"> 
+                        We trained with 32 time steps, 128 batch size, 100 epochs, and 20 pieces of piano music (taking approximately 100 minutes in total). At the end of the training process, the <mark>test accuracy is roughly 0.34</mark>, and the <mark>loss is roughly 2.72</mark>.
+                        <br>
+                        <br>
+                        Play the audio file below to hear our final output:
+                        <br>
+                        <br>
+                    </h2>
+                    <audio controls>
+                        <source src="assets/img/music.mp3" />
+                    </audio>
+                </div>
+
+            </section>
+
+            <!--===== RESULS PICTURE =====-->
+            <section class="project__image__container">
+                <h2 class="image__title"> Accuracy and Loss Results </h2>
+                <img class="convolution__image" src="assets/img/accuracy.png" alt="">
+                <h3 class="image__caption"> Figure IV. Testing and Training Accuracy (above) </h3>
+                <img class="convolution__image" src="assets/img/loss.png" alt="">
+                <h3 class="image__caption"> Figure V. Testing and Training Loss (above) </h3>
+            </section>
+
+            <!--===== CONCLUSION =====-->
+            <section class="project__info__container">
+                <div class="project__info__text">
+                    <div class="project__info__title_div"> 
+                        <h1 class="project__info__title"> Conclusion </h1>
+                        <div class="project__info__line"> </div>
+                    </div>
+                    <h2 class="project__info__description"> 
+                        <mark> We were able to reach our target goal </mark> of generating an audio file with a training dataset consisting of twenty piano songs by Beethoven through improving the reference code by changing it to be an easy-to-use object-oriented API.
+                        <br>
+                        <br>
+                        We might have been able to achieve better results if we had more time and resources. First, we could improve the <mark>loss function</mark>. Second, due to the limitations of Google Colab, we were unable to train on larger datasets or for more epochs. The original paper suggests that <mark>training on 8-10 hours of music data and 1,500 epochs might achieve ideal results</mark> .
+                        <br>
+                        <br>
+                        Furthermore, we would have hoped to expand the scope of the generated music. A change that could be made would be allowing users to <mark>specify a specific genre, key, or vocal</mark> of the output audio file to be (such as keys = A minor, genre = rock & roll, vocal = soprano).
+                        </h2>
+                </div>
+
+            </section>
+
+            <!--===== TAKEAWAYS =====-->
+            <section class="project__info__container">
+                <div class="project__info__text">
+                    <div class="project__info__title_div"> 
+                        <h1 class="project__info__title"> Takeaways </h1>
+                        <div class="project__info__line"> </div>
+                    </div>
+                    <h2 class="project__info__description"> 
+                    Ultimately, this project left us each with many important takeaways. None of our group members had ever implemented a deep learning model for a topic or application of our choice. It taught us how to <mark>search for reliable state-of-the-art research papers, understand others' implementations, brainstorm potential changes, and modify the code according to our customized needs</mark>.
+
+                    </h2>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title"> jane doe </h2>
+                    <p class="footer__text">hello! welcome to my portfolio</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">explore</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">home</a></li>
+                        <li><a href="#skills" class="footer__link">skills</a></li>
+                        <li><a href="#portfolio" class="footer__link">portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">follow</h2>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
