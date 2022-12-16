@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Jane Doe Portfolio</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">j.</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">home</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">skills</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container">
+                    <img class="portrait__image" src="assets/img/portrait.png" alt="">
+                    <h1 class="home__title"> jane doe </h1>
+                    <h3 class="home__description"> hello there! <br> i am a full-stack engineer at Company X. <br> my three key elements in design are
+                    <br> simplicity, efficiency, and creativity. </h3>
+
+                    <a href="#skills" class="home__scroll-link"><i class='bx bx-down-arrow-alt' ></i> scroll down</a>
+
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">skills</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        <h3 class="skills__subtitle">development</h3>
+                        <span class="skills__name">html</span>
+                        <span class="skills__name">css</span>
+                        <span class="skills__name">javascript</span>
+                        <span class="skills__name">react</span>
+                        <span class="skills__name">python</span>
+                        <span class="skills__name">c</span>
+                        
+                        <h3 class="skills__subtitle">design</h3>
+                        <span class="skills__name">figma</span>
+                        <span class="skills__name">adobe xd</span>
+                        <span class="skills__name">photoshop</span>
+                    </div>
+
+                    <div class="skills__img">
+                        <img src="assets/img/skills.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== PORTFOLIO =====-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">portfolio</h2>
+
+                <div class="portfolio__container">
+                    <div class="portfolio__item"> 
+                        <div class="portfolio__img">
+                            <img class="portfolio_image" src="assets/img/chanel.png" alt="">
+    
+                            <div class="portfolio__link">
+                                <a href="development.html" class="portfolio__link-name">View Project</a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__text__container">
+                            <h3 class="portfolio__text_description"> Create a wishlist of your favorite handbags in minutes </h3>
+                            <h3 class="portfolio__title"> DISCOVERING CHANEL </h3>
+                            <h3 class="portfolio__subtitle"> ui/ui, web design, react </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio__item"> 
+                        <div class="portfolio__img">
+                            <img class="portfolio_image" src="assets/img/pasticheoverall.jpeg" alt="">
+    
+                            <div class="portfolio__link">
+                                <a href="responsivedesign.html" class="portfolio__link-name">View Project</a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__text__container">
+                            <h3 class="portfolio__text_description"> Order from a local bakery in three simple steps </h3>
+                            <h3 class="portfolio__title"> REDESIGNING PASTICHE </h3>
+                            <h3 class="portfolio__subtitle"> ui/ux, web design, figma </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio__item"> 
+                        <div class="portfolio__img">
+                            <img class="portfolio_image" src="assets/img/applydesign.png" alt="">
+    
+                            <div class="portfolio__link">
+                                <a href="iterativedesign.html" class="portfolio__link-name">View Project</a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__text__container">
+                            <h3 class="portfolio__text_description"> Stage your home in a few clicks </h3>
+                            <h3 class="portfolio__title"> APPLY DESIGN </h3>
+                            <h3 class="portfolio__subtitle"> ui/ui, web design, figma </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio__item"> 
+                        <div class="portfolio__img">
+                            <img class="portfolio_image" src="assets/img/wavenet.png" alt="">
+    
+                            <div class="portfolio__link">
+                                <a href="deeplearning.html" class="portfolio__link-name">View Project</a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__text__container">
+                            <h3 class="portfolio__text_description"> Generate music with deep learning </h3>
+                            <h3 class="portfolio__title"> WAVENET </h3>
+                            <h3 class="portfolio__subtitle"> deep learning, python </h3>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">jane doe</h2>
+                    <p class="footer__text">hello! welcome to my portfolio</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">explore</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">home</a></li>
+                        <li><a href="#skills" class="footer__link">skills</a></li>
+                        <li><a href="#portfolio" class="footer__link">portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">follow</h2>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
